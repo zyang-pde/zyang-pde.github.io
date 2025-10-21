@@ -1,51 +1,138 @@
-body{
-background:#f4f4f4;
-Font-family:Helvetica;
-}
-.box-1{
-background-color:#808080;
-color:#808080;
-margin:40px 200px 80px 200px;
-}
-.box-2{
-margin:40px 210px 40px 210px;
-}
-a{
-Color:black;
-}
-a:hover{
-Color:gray;
-}
-a:active{
-Color:red;
-}
-.block{
-Background-color:#333;
-Float:left;
-Width:33.3%;
-Border:1px solid #ccc;
-Padding:2px;
-Box-sizing:border-box;
-text-align:center;
+/* 基础样式 */
+body {
+    background: #f4f4f4;
+    font-family: "Helvetica", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
 }
 
-.block h4{
-text-align:center;
-Color:#FFF;
+/* 头部样式 */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: #fff;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.block a{
-background-color:#333;
-Color:#fff;
-Text-decoration:none;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: rgb(0, 77, 101);
 }
 
-.block a:hover{
-Color:gray;
+.contact-info, .address {
+    margin: 0.5rem 0;
+    color: #666;
 }
 
-.button{
-Background-color:#333;
-Color:#FFF;
-Border:none;
+/* 导航样式 */
+.main-nav {
+    background: #333;
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    background: #555;
+}
+
+/* 主内容区 */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 出版物部分 */
+.publications {
+    margin-bottom: 3rem;
+}
+
+.publications h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    color: rgb(0, 77, 101);
+}
+
+.publications ol {
+    list-style: none;
+    padding: 0;
+}
+
+.publications li {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.publications li:last-child {
+    border-bottom: none;
+}
+
+.publications a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.publications a:hover {
+    text-decoration: underline;
+}
+
+.publications .journal {
+    color: gray;
+    font-weight: bold;
+}
+
+/* 合作者部分 */
+.collaborators ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.collaborators a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.collaborators a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    .collaborators ul {
+        grid-template-columns: 1fr;
+    }
 }
